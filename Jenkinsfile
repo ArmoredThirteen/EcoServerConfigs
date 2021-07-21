@@ -4,6 +4,7 @@ pipeline {
 	options {
 		buildDiscarder(logRotator(numToKeepStr:'3'))
 		disableConcurrentBuilds()
+		timeout(time: 30, units:'SECONDS')
 	}
 
 	stages {
@@ -33,7 +34,7 @@ void stageDeploy() {
 		scpToTarget(filesToMove[i], "/root/Eco/Configs");
 	}
 
-	sh "ssh -f -i ~/.ssh/GameSave_JenkinsBuild root@128.199.0.134 \"pkill EcoServer ; cd ~/Eco ; ./EcoServer\""
+	sh "ssh -i ~/.ssh/GameSave_JenkinsBuild root@128.199.0.134 \"pkill EcoServer ; cd ~/Eco ; ./EcoServer\""
 }
 
 void postAlwaysCleanup() {
