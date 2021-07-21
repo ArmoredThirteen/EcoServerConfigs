@@ -42,5 +42,5 @@ boolean isMain(){
 
 
 void scpToTarget(String filename, String dir) {
-	sh "scp -i ~/.ssh/GameSave_JenkinsBuild ${filename} root@174.138.54.72:${dir}"
+	sh "scp -i ~/.ssh/GameSave_JenkinsBuild ${filename} root@128.199.0.134:${dir}"
 }
