@@ -7,6 +7,7 @@ pipeline {
 	}
 
 	stages {
+
 		stage('Deploy'){steps {stageDeploy()}}
 	}
 
@@ -32,6 +33,8 @@ void stageDeploy() {
 	for (int i = 0; i < filesToMove.length; i++) {
 		scpToTarget(filesToMove[i], "/root/Eco/Configs");
 	}
+
+	sh 'ssh -i ~/.ssh/GameSave_JenkinsBuild root@128.199.0.134 "cd ~/Eco ; screen -XS EcoServer quit ; screen -S EcoServer ; ./EcoServer"'
 }
 
 void postAlwaysCleanup() {
