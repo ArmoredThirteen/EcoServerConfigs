@@ -20,7 +20,7 @@ void stageDeploy() {
 
 	sh "ls"
 
-	sh "ssh -i ~/.ssh/GameSave_JenkinsBuild root@128.199.0.134 rmdir /root/Eco/Storage"
+	sh "ssh -i ~/.ssh/GameSave_JenkinsBuild root@128.199.0.134 rmdir -r /root/Eco/Storage"
 
 	String[] filesToMove = [
 		"./Network.eco",
