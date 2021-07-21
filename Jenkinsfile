@@ -15,11 +15,10 @@ pipeline {
 
 
 void stageDeploy() {
-	sh "ls"
-	return
-
 	if (!isMain())
 		return
+
+	sh "ls"
 
 	String[] filesToMove = [
 		"./Network.eco",

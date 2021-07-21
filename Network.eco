@@ -1,0 +1,19 @@
+{
+  "PublicServer": false,
+  "Playtime": "",
+  "Password": "",
+  "Description": "EcoServer",
+  "DetailedDescription": "",
+  "ServerCategory": "None",
+  "IPAddress": "Any",
+  "RemoteAddress": "",
+  "WebServerUrl": "",
+  "GameServerPort": 3000,
+  "WebServerPort": 3001,
+  "Rate": 20,
+  "MaxConnections": -1,
+  "ID": "3c458be6-a8fa-400c-9176-cdcb48dcc561",
+  "Passport": "97805277-4eee-4ca2-ae3c-774e6e36a067",
+  "UPnPEnabled": true,
+  "RelayServerAddress": ""
+}
